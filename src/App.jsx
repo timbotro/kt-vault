@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./App.css";
+const Me = import("../assets/me.jpeg")
+const DemoGif = import("../assets/demo.gif")
+const Logo = import("../assets/vault-run.jpg")
 
 function App() {
   return (
@@ -33,7 +36,7 @@ function App() {
       <div class="hero min-h-screen bg-base-200">
         <div class="hero-content flex-col lg:flex-row-reverse">
           <img
-            src="../assets/vault-run.jpg"
+            src={Logo}
             class="max-w-sm rounded-lg shadow-2xl"
           />
           <div>
@@ -100,7 +103,7 @@ function App() {
             </div>
             <div id="slide3" class="carousel-item relative w-full">
               <img
-                src="../assets/demo.gif"
+                src={DemoGif}
                 class="w-full"
               />
               <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -154,7 +157,7 @@ function App() {
 
       <footer class="footer footer-center p-10 bg-primary text-primary-content">
         <div>
-          <img src="../assets/me.jpeg" width="100" height="100"></img>
+          <img src={Me} width="100" height="100"></img>
           {/* <svg
             width="50"
             height="50"
