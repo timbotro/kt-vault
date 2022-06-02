@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-const Me = import("../assets/me.jpeg")
-const DemoGif = import("../assets/demo.gif")
-const Logo = import("../assets/vault-run.jpg")
+
+import DemoGif from "../assets/demo.gif"
+import Logo from "../assets/vault-run.jpg"
+import Me from "../assets/me.jpeg"
 
 function App() {
   return (
