@@ -5,6 +5,11 @@ import DemoGif from "../assets/demo.gif"
 import Logo from "../assets/vault-run.jpg"
 import Me from "../assets/me.jpeg"
 import Kint from "../assets/kint.png"
+import Secure from "../assets/secure.png"
+import Karura from "../assets/karura.png"
+import Responsive from "../assets/responsive.gif"
+import Calculation from "../assets/calculation.gif"
+import UX from "../assets/ux.gif"
 
 function App() {
   return (
@@ -14,7 +19,7 @@ function App() {
         <div class="flex-1">
           <a class="btn btn-ghost normal-case text-xl">kt vault runner</a>
         </div>
-        <div class="flex-none">
+        {/* <div class="flex-none">
           <ul class="menu menu-horizontal p-0">
             <li>
               <a href="#home">Home</a>
@@ -32,10 +37,10 @@ function App() {
               <a>Docs</a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
 
-      <div class="hero min-h-screen bg-base-100">
+      <div class="hero min-h-screen bg-base-200">
         <div class="hero-content flex-col lg:flex-row-reverse">
           <img src={Logo} class="max-w-sm rounded-lg shadow-2xl" />
           <div>
@@ -54,54 +59,117 @@ function App() {
             <h1 class="text-5xl font-bold">We need more Vault Runners!</h1>
             <br></br>
             <p class="text-2xl">
-              Kintsugi Vaults allow for fully insured wrapping of the most robust cryptocurrency asset - <b>Bitcoin</b>.
-              To ensure decentralization, we need to attract high quantities of small vault operators.
+              Kintsugi Vaults allow for fully insured wrapping of the most robust cryptocurrency asset in the world -{" "}
+              <b>Bitcoin</b>.
             </p>
             <br></br>
             <p class="text-2xl">
-              However, smaller vault operators usually only custody their own funds and are naturally more
+              {" "}
+              To increase issuance whilst promoting decentralization: it is better to have high quantities of smaller
+              vault operators 🐜; than a select few of large operators 🐳.
+            </p>
+            <br></br>
+            <p class="text-2xl">
+              Smaller vault operators, however, usually only custody their own funds and are naturally more
               self-interested.
             </p>
             <br></br>
             <p class="text-2xl">
               <b>kt-vault-runner</b> has been made specifically for individuals to achieve a higher capital efficiency
-              of their funds but automating laborious tasks so they can maintain high yields whilst reducing market risk
+              of their funds by automating laborious tasks so they can maintain high yields whilst reducing market risk
               of holding multiple volatile assets.
             </p>
           </div>
         </div>
       </div>
 
-
       <div class="hero min-h-screen bg-base-100">
         <div class="hero-content flex-col lg:flex-row-reverse">
-          <img src={DemoGif} class="max-w-2xl rounded-lg shadow-2xl" />
+          <img src={Responsive} class="max-w-2xl rounded-lg shadow-2xl" />
           <div>
             <h1 class="text-5xl font-bold">🤌 One Touch Execution </h1>
-            <p class="py-6">Cross-chain transactions execute in sequence after setting desired parameters.</p>
+            <p class="py-3">Cross-chain transactions execute in sequence after entering desired parameters.</p>
+            <p class="py-3">All extrinsic IDs and links are reported to the console for book-keeping.</p>
           </div>
         </div>
       </div>
 
-      <div class="hero min-h-screen bg-base-200">
+      <div class="hero min-h-screen bg-base-300">
         <div class="hero-content flex-col lg:flex-row">
-          <img src={DemoGif} class="max-w-2xl rounded-lg shadow-2xl" />
+          <img src={Calculation} class="max-w-2xl rounded-lg shadow-2xl" />
           <div>
             <h1 class="text-5xl font-bold">Collateral Calculation ⚖️</h1>
-            <p class="py-6">Using a combination of on-chain data, external price oracles and aggregated sources; <b>kt vault runner </b>  
-             calculates the neccesary about your vault so you can make decisions on how to balance the market risk of holding <b>BTC</b>,
-             <b>KINT</b> and <b>KSM</b>.</p>
+            <p class="py-4">
+              Using a combination of on-chain data, external price oracles and aggregated sources;{" "}
+              <b>kt vault runner </b>
+              calculates the neccesary information about your vault so you can make decisions on how to balance the
+              market risk of holding <b>BTC</b>,<b>KINT</b> and <b>KSM</b>.
+            </p>
+            <p class="py-4 text-1xl">
+              The app performs validation to make sure you are unable to put yourself at risk or waste time on
+              execute pointless transactions.
+            </p>
           </div>
         </div>
       </div>
 
       <div class="hero min-h-screen bg-base-100">
         <div class="hero-content flex-col lg:flex-row-reverse">
-          <img src={DemoGif} class="max-w-2xl rounded-lg shadow-2xl" />
+          <img src={Secure} class="max-w-2xl rounded-lg shadow-2xl" />
           <div>
             <h1 class="text-5xl font-bold">🔐 Secure by Design</h1>
-            <p class="py-6">Your seedphrase is only ever used to generate a KeychainPair, and is secured by password on your local device.</p>
-            <p class="py-6">It is only ever used in a single line of code, as part of <b>Parity's</b> official library.</p>
+            <br></br>
+            <p class="py-3">
+              No priviledged information is revealed by the app, only publically viewable on-chain data.
+            </p>
+            <p class="py-3">
+              Your seedphrase is only ever used to generate a KeychainPair, and is secured by <i>sudo</i> password on
+              your local machine.
+            </p>
+            <p class="py-3 font-semibold">
+              It is only ever used in a single line of code, as part of <i>Parity's</i> official <b>@polkadot/api</b>{" "}
+              library.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero min-h-screen bg-base-300">
+        <div class="hero-content flex-col lg:flex-row">
+          <img src={Karura} />
+          {/* <svg src={KaruraSVG} width="200" height="150"></svg> */}
+          <div>
+            <h1 class="text-5xl font-bold">Natively Multi-Chain </h1>
+            <br></br>
+            <p class="py-5 text-2xl">
+              <b>kt-vault-runner</b> seemlessly bridges with <b>Karura</b> to execute swaps between tokens.{" "}
+            </p>
+            <p class="py-5 text-2xl">
+              You can also manage your risk by parking spare collateral in Liquidity Pools so you can earn high yields
+              on your precious <b>kBTC</b> tokens.
+            </p>
+
+            <p class="py-5 text-2xl">
+              If you know you will be unavailable to baby sit your vault, you can prepare by rebalancing to a more conversative
+              collateral ratio by using only a single command.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero min-h-screen bg-base-100">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <img src={UX} class="max-w-2xl rounded-lg shadow-2xl" />
+          <div>
+            <h1 class="text-5xl font-bold">🧠 Intuitive UX</h1>
+            <br></br>
+            <p class="py-3">
+              The only thing you need to remember is your sudo password! Everything else is calculated dynamically for
+              you.
+            </p>
+            <p class="py-3">
+              Navigate through the options to execute your workflow and watch the progress of extrinsics in real time.
+            </p>
           </div>
         </div>
       </div>
