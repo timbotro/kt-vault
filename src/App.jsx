@@ -13,7 +13,7 @@ import UX from "../assets/ux.gif"
 function App() {
   return (
     <div className="App" class="relative">
-      <div class="navbar fixed bg-base-200 z-50 opacity-95 ">
+      <div class="navbar fixed z-50 opacity-90 bg-primary text-primary-content">
         <div class="navbar-start">
           <div class="dropdown">
             <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -31,7 +31,7 @@ function App() {
           <a class="btn btn-ghost normal-case text-xl">kt vault runner</a>
         </div>
         <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal p-0">
+          <ul class="menu menu-horizontal font-bond p-0 ">
             <li>
               <a href="#home">Home</a>
             </li>
@@ -45,7 +45,7 @@ function App() {
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
               </a>
-              <ul class="p-2 bg-base-200">
+              <ul class="p-2 bg-primary text-primary-content">
                 <li>
                   <a href="#exec">Execution</a>
                 </li>
@@ -75,9 +75,9 @@ function App() {
           <div>
             <h1 class="text-5xl font-bold">KT Vault Runner</h1>
             <p class="text-4xl py-6">Essential workflow automation for Vault Operators on the Kinsugi Network.</p>
-            <button class="btn btn-primary">
-              <a href="#why">Scroll Down to Learn More</a>
-            </button>
+            <a href="#why"><button class="btn btn-primary">
+             Scroll Down to Learn More
+            </button></a>
           </div>
         </div>
       </div>
@@ -209,7 +209,7 @@ function App() {
 
       {/* <div class="divider"></div> */}
 
-      <footer class="footer footer-center p-10 bg-base-200 text-primary-content">
+      <footer class="footer footer-center p-10 bg-secondary text-secondary-content">
         <div>
           <img src={Me} width="100" height="100"></img>
           {/* <svg
