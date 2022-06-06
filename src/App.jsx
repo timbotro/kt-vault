@@ -1,7 +1,6 @@
 import { useState } from "react"
 import "./App.css"
 
-import DemoGif from "../assets/demo.gif"
 import Logo from "../assets/vault-run.jpg"
 import Me from "../assets/me.jpeg"
 import Kint from "../assets/kint.png"
@@ -13,13 +12,25 @@ import UX from "../assets/ux.gif"
 
 function App() {
   return (
-    <div className="App">
-      <a name="home"></a>
-      <div class="navbar bg-base-200">
-        <div class="flex-1">
+    <div className="App" class="relative">
+      {/* <div class="navbar fixed bg-base-00 z-50 opacity-95 ">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </label>
+          </div>
           <a class="btn btn-ghost normal-case text-xl">kt vault runner</a>
         </div>
-        {/* <div class="flex-none">
+        <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal p-0">
             <li>
               <a href="#home">Home</a>
@@ -27,35 +38,55 @@ function App() {
             <li>
               <a href="#why">Why</a>
             </li>
-            <li>
-              <a href="#functions">Functions</a>
+            <li tabindex="0">
+              <a>
+                Features
+                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                </svg>
+              </a>
+              <ul class="p-2">
+                <li>
+                  <a href="#exec">Execution</a>
+                </li>
+                <li>
+                  <a href="#calc">Calculation</a>
+                </li>
+                <li>
+                  <a href="#sec">Security</a>
+                </li>
+                <li>
+                  <a href="#ux">UX</a>
+                </li>
+              </ul>
             </li>
             <li>
               <a href="#how">How to</a>
             </li>
-            <li>
-              <a>Docs</a>
-            </li>
           </ul>
-        </div> */}
-      </div>
+        </div>
+        <div class="navbar-end"></div>
+      </div> */}
 
-      <div class="hero min-h-screen bg-base-200">
+      <a name="home"></a>
+      <div class="hero min-h-screen bg-base-200 z-0">
         <div class="hero-content flex-col lg:flex-row-reverse">
           <img src={Logo} class="max-w-sm rounded-lg shadow-2xl" />
           <div>
             <h1 class="text-5xl font-bold">KT Vault Runner</h1>
             <p class="text-4xl py-6">Essential workflow automation for Vault Operators on the Kinsugi Network.</p>
-            <button class="btn btn-primary">Scroll Down to Learn More</button>
+            <button class="btn btn-primary">
+              <a href="#why">Scroll Down to Learn More</a>
+            </button>
           </div>
         </div>
       </div>
 
       <a name="why"></a>
-      <div class="hero min-h-screen bg-base-300">
+      <div class="hero min-h-full bg-base-300 z-0">
         <div class="hero-content flex-col lg:flex-row">
           <img src={Kint} class="max-w-sm rounded-lg shadow-2xl" />
-          <div>
+          <div class="py-24 pl-10">
             <h1 class="text-5xl font-bold">We need more Vault Runners!</h1>
             <br></br>
             <p class="text-2xl">
@@ -83,22 +114,23 @@ function App() {
         </div>
       </div>
 
-      <div class="hero min-h-screen bg-base-100">
+      <a name="exec"></a>
+      <div class="hero min-h-full bg-base-100 z-0">
         <div class="hero-content flex-col lg:flex-row-reverse">
           <img src={Responsive} class="max-w-2xl rounded-lg shadow-2xl" />
-          <div>
+          <div class="py-44 pr-10">
             <h1 class="text-5xl font-bold">🤌 One Touch Execution </h1>
             <p class="py-3">Cross-chain transactions execute in sequence after entering desired parameters.</p>
             <p class="py-3">All extrinsic IDs and links are reported to the console for book-keeping.</p>
           </div>
         </div>
       </div>
-
-      <div class="hero min-h-screen bg-base-300">
+      <a name="calc"></a>
+      <div class="hero min-h-full bg-base-300 z-0">
         <div class="hero-content flex-col lg:flex-row">
           <img src={Calculation} class="max-w-2xl rounded-lg shadow-2xl" />
-          <div>
-            <h1 class="text-5xl font-bold">Collateral Calculation ⚖️</h1>
+          <div class="py-44 pl-10">
+            <h1 class="text-5xl font-bold">Auto-Calculation ⚖️</h1>
             <p class="py-4">
               Using a combination of on-chain data, external price oracles and aggregated sources;{" "}
               <b>kt vault runner </b>
@@ -106,17 +138,17 @@ function App() {
               market risk of holding <b>BTC</b>,<b>KINT</b> and <b>KSM</b>.
             </p>
             <p class="py-4 text-1xl">
-              The app performs validation to make sure you are unable to put yourself at risk or waste time on
-              execute pointless transactions.
+              The app performs validation to make sure you are unable to put yourself at risk or waste time on execute
+              pointless transactions.
             </p>
           </div>
         </div>
       </div>
-
-      <div class="hero min-h-screen bg-base-100">
+      <a name="sec"></a>
+      <div class="hero min-h-full bg-base-100 z-0">
         <div class="hero-content flex-col lg:flex-row-reverse">
           <img src={Secure} class="max-w-2xl rounded-lg shadow-2xl" />
-          <div>
+          <div class="py-44 pr-10">
             <h1 class="text-5xl font-bold">🔐 Secure by Design</h1>
             <br></br>
             <p class="py-3">
@@ -134,11 +166,11 @@ function App() {
         </div>
       </div>
 
-      <div class="hero min-h-screen bg-base-300">
+      <div class="hero min-h-full bg-base-300 z-0">
         <div class="hero-content flex-col lg:flex-row">
           <img src={Karura} />
           {/* <svg src={KaruraSVG} width="200" height="150"></svg> */}
-          <div>
+          <div class="py-44 pl-40">
             <h1 class="text-5xl font-bold">Natively Multi-Chain </h1>
             <br></br>
             <p class="py-5 text-2xl">
@@ -150,17 +182,18 @@ function App() {
             </p>
 
             <p class="py-5 text-2xl">
-              If you know you will be unavailable to baby sit your vault, you can prepare by rebalancing to a more conversative
-              collateral ratio by using only a single command.
+              If you know you will be unavailable to baby sit your vault, you can prepare by rebalancing to a more
+              conversative collateral ratio by using only a single command.
             </p>
           </div>
         </div>
       </div>
 
-      <div class="hero min-h-screen bg-base-100">
+      <a name="ux"></a>
+      <div class="hero min-h-full bg-base-100 z-0">
         <div class="hero-content flex-col lg:flex-row-reverse">
           <img src={UX} class="max-w-2xl rounded-lg shadow-2xl" />
-          <div>
+          <div class="py-44 pr-10">
             <h1 class="text-5xl font-bold">🧠 Intuitive UX</h1>
             <br></br>
             <p class="py-3">
