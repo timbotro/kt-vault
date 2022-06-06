@@ -13,7 +13,7 @@ import UX from "../assets/ux.gif"
 function App() {
   return (
     <div className="App" class="relative">
-      {/* <div class="navbar fixed bg-base-00 z-50 opacity-95 ">
+      <div class="navbar fixed bg-base-200 z-50 opacity-95 ">
         <div class="navbar-start">
           <div class="dropdown">
             <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -45,7 +45,7 @@ function App() {
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
               </a>
-              <ul class="p-2">
+              <ul class="p-2 bg-base-200">
                 <li>
                   <a href="#exec">Execution</a>
                 </li>
@@ -66,7 +66,7 @@ function App() {
           </ul>
         </div>
         <div class="navbar-end"></div>
-      </div> */}
+      </div>
 
       <a name="home"></a>
       <div class="hero min-h-screen bg-base-200 z-0">
