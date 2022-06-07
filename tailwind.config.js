@@ -1,6 +1,6 @@
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  plugins: [require("@tailwindcss/typography"), require("daisyui"), require("@tailwindcss/aspect-ratio")],
   daisyui: {
     styled: true,
     themes: true,
@@ -11,4 +11,4 @@ module.exports = {
     prefix: "",
     // darkTheme: "dark",
   },
-};
+}

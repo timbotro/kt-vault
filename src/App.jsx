@@ -1,7 +1,8 @@
 import { useState } from "react"
 import "./App.css"
 
-import Logo from "../assets/vault-run.jpg"
+import Logo from "../assets/VaultRunner640.png"
+import LogoSVG from "../assets/VaultRunnerSVG.svg"
 import Me from "../assets/me.jpeg"
 import Kint from "../assets/kint.png"
 import Secure from "../assets/secure.png"
@@ -9,6 +10,10 @@ import Karura from "../assets/karura.png"
 import Responsive from "../assets/responsive.gif"
 import Calculation from "../assets/calculation.gif"
 import UX from "../assets/ux.gif"
+import GH from "../assets/GH.png"
+import KTSVG from "../assets/Kintsugi_Icon_RGB_blue_trans.svg"
+import KSM from "../assets/KUSAMA_Canary.svg"
+
 
 function App() {
   return (
@@ -28,11 +33,14 @@ function App() {
               </svg>
             </label>
           </div>
+          <img src={LogoSVG} width="32" height="32" viewBox="0 0 32 32" class="fill-current" />
           <a class="btn btn-ghost normal-case text-xl">kt vault runner</a>
+
         </div>
-        <div class="navbar-center hidden lg:flex">
+        <div class="navbar-end hidden lg:flex">
           <ul class="menu menu-horizontal font-bond p-0 ">
             <li>
+     
               <a href="#home">Home</a>
             </li>
             <li>
@@ -61,23 +69,22 @@ function App() {
               </ul>
             </li>
             <li>
-              <a href="#how">How to</a>
+              <a href="#vid">Videos</a>
             </li>
           </ul>
         </div>
-        <div class="navbar-end"></div>
       </div>
 
       <a name="home"></a>
-      <div class="hero min-h-screen bg-base-200 z-0">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <img src={Logo} class="max-w-sm rounded-lg shadow-2xl" />
-          <div>
+      <div class="hero min-h-screen bg-base-200 z-0 ">
+        <div class="hero-content flex-col lg:flex-row-reverse rounded-lg shadow-2xl p-20 bg-accent">
+          <img src={Logo} class="max-w-sm" />
+          <div class="text-accent-content">
             <h1 class="text-5xl font-bold">KT Vault Runner</h1>
             <p class="text-4xl py-6">Essential workflow automation for Vault Operators on the Kinsugi Network.</p>
-            <a href="#why"><button class="btn btn-primary">
-             Scroll Down to Learn More
-            </button></a>
+            <a href="#why">
+              <button class="btn btn-primary">Scroll Down to Learn More</button>
+            </a>
           </div>
         </div>
       </div>
@@ -119,7 +126,7 @@ function App() {
         <div class="hero-content flex-col lg:flex-row-reverse">
           <img src={Responsive} class="max-w-2xl rounded-lg shadow-2xl" />
           <div class="py-44 pr-10">
-            <h1 class="text-5xl font-bold">🤌 One Touch Execution </h1>
+            <h1 class="text-5xl font-bold">🤌 One-Touch Execution </h1>
             <p class="py-3">Cross-chain transactions execute in sequence after entering desired parameters.</p>
             <p class="py-3">All extrinsic IDs and links are reported to the console for book-keeping.</p>
           </div>
@@ -207,7 +214,54 @@ function App() {
         </div>
       </div>
 
-      {/* <div class="divider"></div> */}
+      <a name="vid"></a>
+      <div class="carousel w-full">
+        <div id="item1" class="carousel-item w-full aspect-w-16 aspect-h-9">
+            <iframe
+              src="https://www.youtube.com/embed/8s0O30o7Qz4"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+        </div>
+        <div id="item2" class="carousel-item w-full aspect-w-16 aspect-h-9">
+            <iframe
+              src="https://www.youtube.com/embed/mUi3o1SZ_-I"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+        </div>        <div id="item3" class="carousel-item w-full aspect-w-16 aspect-h-9">
+            <iframe
+              src="https://www.youtube.com/embed/MUvXBSdAZHI"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+        </div>        <div id="item4" class="carousel-item w-full aspect-w-16 aspect-h-9">
+            <iframe
+              src="https://www.youtube.com/embed/axCmXD4Bn58"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+        </div>
+      </div>
+      <div class="flex justify-center w-full py-2 gap-2">
+        <a href="#item1" class="btn btn-xs">
+          Installation
+        </a>
+        <a href="#item2" class="btn btn-xs">
+          Issuance
+        </a>
+        <a href="#item3" class="btn btn-xs">
+          Harvest
+        </a>
+        <a href="#item4" class="btn btn-xs">
+          Rebalance
+        </a>
+      </div>
+      <div class="divider"></div>
 
       <footer class="footer footer-center p-10 bg-secondary text-secondary-content">
         <div>
@@ -227,20 +281,22 @@ function App() {
         </div>
         <div>
           <div class="grid grid-flow-col gap-4">
-            <a>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+            <a href="https://github.com/timbotro/kt-vault-runner">
+              <img src={GH} width="32" height="32"/>
+              {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
                 <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-              </svg>
+              </svg> */}
             </a>
-            <a>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+            <a href="https://youtu.be/86Rn3SFJOrs">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="fill-current">
                 <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
               </svg>
             </a>
-            <a>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
-                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-              </svg>
+            <a href="https://interlay.io/">
+              <img src={KTSVG} width="32" height="32" />
+            </a>
+            <a href="https://kusama.network/">
+              <img src={KSM} width="32" height="32" />
             </a>
           </div>
         </div>
